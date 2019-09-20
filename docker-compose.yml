@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+  cms:
+    build:
+      context: './cms/'
+      args:
+        PHP_VERSION: ${PHP_VERSION}
+        APACHE_VERSION: ${APACHE_VERSION}
+    ports:
+      - "80:80"
+    container_name: cms-api
+volumes:
+  data:
