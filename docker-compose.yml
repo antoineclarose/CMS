@@ -7,7 +7,9 @@ services:
         PHP_VERSION: ${PHP_VERSION}
         APACHE_VERSION: ${APACHE_VERSION}
     ports:
-      - "80:80"
+      - "8083:8083"
+      - "3306:3306"
     container_name: cms-api
+    network_mode: "host"
 volumes:
   data:
